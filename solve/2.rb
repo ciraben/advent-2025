@@ -1,10 +1,11 @@
 require_relative "helpers"
 
 class Solution
-  attr_reader :invalid_ids, :sum
+  attr_reader :invalid_ids, :invalid_ids_list, :sum
   alias :solution :sum
 
   def initialize(input)
+    @invalid_ids_list = []
     @invalid_ids = 0
     @sum = 0
     parse(input)
