@@ -17,4 +17,4 @@ else
   soln = Solution.new data problem_num
 end
 
-puts soln.password
+puts soln.solution

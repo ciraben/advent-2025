@@ -2,6 +2,7 @@ require_relative "helpers"
 
 class Solution
   attr_reader :dial, :password
+  alias :solution :password
 
   def initialize(input)
     @dial = 50
