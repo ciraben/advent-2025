@@ -1,7 +1,7 @@
 require_relative "../solve/1"
 
-RSpec.describe Solution do
-  subject { Solution.new(input) }
+RSpec.describe Solution_1 do
+  subject { Solution_1.new(input) }
 
   context "without input" do
     let(:input) { "" }

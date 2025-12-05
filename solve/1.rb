@@ -1,6 +1,6 @@
 require_relative "helpers"
 
-class Solution
+class Solution_1
   attr_reader :dial, :password
   alias :solution :password
 

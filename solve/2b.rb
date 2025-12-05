@@ -1,6 +1,6 @@
 require_relative "2"
 
-class Solution_B < Solution
+class Solution_2B < Solution_2
   def check(id)
     n = id.length
 

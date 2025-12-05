@@ -1,6 +1,6 @@
 require_relative "helpers"
 
-class Solution
+class Solution_2
   attr_reader :invalid_ids, :invalid_ids_list, :sum
   alias :solution :sum
 

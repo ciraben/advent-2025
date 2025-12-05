@@ -12,9 +12,9 @@ require_relative "solve/" << problem_to_solve[0]
 problem_num, bee = problem_to_solve.captures
 
 if bee
-  soln = Solution_B.new data problem_num
+  soln = eval("Solution_#{problem_num}B.new data problem_num")
 else
-  soln = Solution.new data problem_num
+  soln = eval("Solution_#{problem_num}.new data problem_num")
 end
 
 puts soln.solution

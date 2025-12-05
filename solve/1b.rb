@@ -1,6 +1,6 @@
 require_relative "1"
 
-class Solution_B < Solution
+class Solution_1B < Solution_1
   private
 
   def parse(input)

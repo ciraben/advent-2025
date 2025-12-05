@@ -1,6 +1,6 @@
 require_relative "helpers"
 
-class Solution
+class Solution_3
   attr_reader :joltages, :sum
 
   def initialize(input)
