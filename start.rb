@@ -21,17 +21,30 @@ if existing.include? problem
 end
 
 solve_rb = <<TEXT
-require_relative "#{bee ? num : "helpers"}"
+require_relative "helpers"
 
-class Solution_#{num}#{"B < Solution_" << num if bee}
-  attr_reader :placeholder
+class Solution_#{num}
+  attr_reader :placeholder, :another_placeholder
 
   def initialize(input)
+    @placeholder = 0
+    @another_placeholder = []
     parse(input)
   end
 
   alias :solution :placeholder
 
+  private
+
+  def parse(input)
+  end
+end
+TEXT
+
+solve_b_rb = <<TEXT
+require_relative "#{num}"
+
+class Solution_#{num}B < Solution_#{num}
   private
 
   def parse(input)
@@ -65,7 +78,7 @@ end
 TEXT
 
 File.open("solve/#{problem}.rb", "w") do |f|
-    f.write(solve_rb)
+    f.write(bee ? solve_b_rb : solve_rb)
 end
 
 File.open("spec/#{problem}_spec.rb", "w") do |f|
