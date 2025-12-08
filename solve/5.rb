@@ -26,11 +26,15 @@ class Solution_5
     end
     .sort_by { |r| r.first }
 
-    ids = next_chunk.strip.split.map { |id| id.to_i }.sort
+    @ids = next_chunk.strip.split.map { |id| id.to_i }.sort
 
+    record_fresh_ids
+  end
+
+  def record_fresh_ids
     bookmark = 0
-    ids.each do |id|
-      fresh_ranges[bookmark..].each do |range|
+    @ids.each do |id|
+      @fresh_ranges[bookmark..].each do |range|
         if id < range.first
           break
         elsif id <= range.last
